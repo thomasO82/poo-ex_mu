@@ -12,6 +12,11 @@ class MainController extends Controller {
         }
      
         $pokesCaptured = Pokemon::getCapturedPoke();
+        $pokeArray = [];
+        foreach($pokesCaptured as $pokeCapt){
+            $instancePoke = new Pokemon($pokeCapt["id"],$pokeCapt["name"],$pokeCapt["isCaptured"]);
+            array_push($pokeArray, $instancePoke);
+        }
         require_once("../views/main.php");
 
     }

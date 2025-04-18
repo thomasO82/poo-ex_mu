@@ -27,10 +27,10 @@
     </section>
     <section>
         <h2>Mes pokemons</h2>
-        <?php foreach ($pokesCaptured as $pokeCapt): ?>
-            <h3><?= $pokeCapt['name'] ?></h3>
+        <?php foreach ($pokeArray as $pokeCapt): ?>
+            <h3><?= $pokeCapt->getName() ?></h3>
             <form action="" method="post">
-                <button type="submit" name="free" value=<?= $pokeCapt['id'] ?>>Liberer</button>
+                <button type="submit" name="free" value=<?= $pokeCapt->getId() ?>>Liberer</button>
             </form>
         <?php endforeach ?>
     </section>
