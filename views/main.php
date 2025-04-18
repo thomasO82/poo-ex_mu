@@ -14,7 +14,7 @@
         <h2>Capturer poke</h2>
         <?php if ($poke): ?>
             <p>un pokemon sauvage apparait, <?= $poke->getName() ?> est dans la place</p>
-            <form action="/capture" method="post">
+              <form action="/capture" method="post">
             <button type="submit" name="capture" value=<?= $poke->getId() ?>>Capturer</button>
         </form>
 
@@ -24,22 +24,14 @@
         <?php else: ?>
             <p>Tout les pokemon ont ete capturer</p>
         <?php endif ?>
-
-
-
-      
     </section>
-
     <section>
         <h2>Mes pokemons</h2>
-      
         <?php foreach ($pokesCaptured as $pokeCapt): ?>
-
             <h3><?= $pokeCapt['name'] ?></h3>
             <form action="" method="post">
                 <button type="submit" name="free" value=<?= $pokeCapt['id'] ?>>Liberer</button>
             </form>
-
         <?php endforeach ?>
     </section>
 </body>
