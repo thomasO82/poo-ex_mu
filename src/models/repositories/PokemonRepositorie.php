@@ -32,4 +32,9 @@ abstract class PokemonRepositorie extends Db {
         return self::request($sql);
     }
 
+    public static function addPoke($name){
+        $sql = "INSERT into pokemon (name) VALUES('$name')";
+        return self::request($sql);
+    }
+
 }

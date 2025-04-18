@@ -12,7 +12,7 @@
     <h1>Super poke</h1>
     <section>
         <h2>Capturer poke</h2>
-        <?php if ($poke): ?>
+        <?php if (isset($poke)): ?>
             <p>un pokemon sauvage apparait, <?= $poke->getName() ?> est dans la place</p>
               <form action="/capture" method="post">
             <button type="submit" name="capture" value=<?= $poke->getId() ?>>Capturer</button>
@@ -29,7 +29,7 @@
         <h2>Mes pokemons</h2>
         <?php foreach ($pokeArray as $pokeCapt): ?>
             <h3><?= $pokeCapt->getName() ?></h3>
-            <form action="" method="post">
+            <form action="/free" method="post">
                 <button type="submit" name="free" value=<?= $pokeCapt->getId() ?>>Liberer</button>
             </form>
         <?php endforeach ?>
@@ -37,3 +37,5 @@
 </body>
 
 </html>
+
+

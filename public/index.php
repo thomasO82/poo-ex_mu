@@ -13,6 +13,7 @@ require_once("../src/controllers/Controller.php");
 require_once('../src/controllers/MainController.php');
 require_once('../src/controllers/CaptureController.php');
 require_once('../src/controllers/FreeController.php');
+require_once('../src/controllers/AddPokeDbController.php');
 
 
 $router = new Router();
