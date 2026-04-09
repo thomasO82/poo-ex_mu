@@ -6,7 +6,7 @@ class Db {
     protected static function getInstance(){
         if (self::$instance == null) {
             try {
-                self::$instance = new PDO("mysql:host=localhost;dbname=poke","root","Mon*av2U");
+                self::$instance = new PDO("mysql:host=localhost:8889;dbname=poke","root","root");
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             } catch (PDOException $e) {
                 die($e->getMessage());
